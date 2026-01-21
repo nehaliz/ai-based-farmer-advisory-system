@@ -5,7 +5,6 @@ function appendMessage(sender, text) {
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("message", sender);
 
-
     if (sender === "ai") {
         const avatar = document.createElement("img");
         avatar.src = "avatar.png";
@@ -18,13 +17,14 @@ function appendMessage(sender, text) {
     bubble.textContent = text;
 
     messageDiv.appendChild(bubble);
-
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight; 
 }
 
 async function sendMessage() {
     const question = userInput.value.trim();
+    const userId = localStorage.getItem("farmer_user_id");
+
     if (!question) return;
 
     appendMessage("user", question);
@@ -34,7 +34,10 @@ async function sendMessage() {
         const response = await fetch("http://127.0.0.1:8000/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ query: question })
+            body: JSON.stringify({ 
+                user_id: parseInt(userId), 
+                query: question 
+            })
         });
 
         if (!response.ok) throw new Error("Server error");
@@ -44,10 +47,10 @@ async function sendMessage() {
 
     } catch (error) {
         console.error("Error:", error);
-        appendMessage("ai", "Sorry, I couldn't get a response. Please try again.");
+        appendMessage("ai", "Sorry, I couldn't connect. Try again.");
     }
 }
 
-userInput.addEventListener("keydown", function (e) {
+userInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") sendMessage();
 });
