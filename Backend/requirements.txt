@@ -2,3 +2,8 @@ fastapi
 uvicorn
 mysql-connector-python
 ollama
+tensorflow>=2.15.0
+pillow
+numpy
+python-multipart
+pydantic

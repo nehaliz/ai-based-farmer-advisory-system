@@ -16,7 +16,7 @@ html, body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background: url("farm.png") center / cover no-repeat;
+    background: url("../assets/farm.png") center / cover no-repeat;
 }
 
 /* LEFT SIDE */

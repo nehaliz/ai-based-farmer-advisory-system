@@ -12,9 +12,8 @@
     <!-- CHAT AREA -->
     <div class="chat-container" id="chatBox">
 
-        <!-- AI welcome message -->
         <div class="message ai">
-            <img src="avatar.png" class="avatar">
+            <img src="../assets/avatar.png" class="avatar">
             <div class="bubble">
                 Hello 👋 I’m your AI farming assistant.  
                 Ask me anything about crops, pests, or farming practices.
@@ -27,6 +26,8 @@
     <div class="input-area">
         <input type="text" id="userInput" placeholder="Type your farming question..." />
         <button onclick="sendMessage()">Ask AI</button>
+        <input type="file" id="imageInput" style="display:none" accept="image/*">
+        <button onclick="document.getElementById('imageInput').click()">📸 Upload Leaf img</button>
     </div>
 
 </div>
