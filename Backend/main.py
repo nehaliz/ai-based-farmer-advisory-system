@@ -170,7 +170,7 @@ async def ask_farmer_bot(
 ):
     try:
         diagnosis = ""
-        user_input = query or "Provide agricultural advice."
+        user_input = query or "say how can i help you"
 
         if file:
             img_data = await file.read()
