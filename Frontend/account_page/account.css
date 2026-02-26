@@ -1,0 +1,149 @@
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2e7d32;
+}
+
+.account-card {
+    background: #f0f7f0;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #2e7d32;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #256528;
+}
+
+.logout {
+    background-color: #c62828;
+}
+
+.logout:hover {
+    background-color: #a31515;
+}
+
+:root {
+    --primary-green: #2e7d32;
+    --primary-hover: #1b5e20;
+    --danger-red: #d32f2f;
+    --danger-hover: #b71c1c;
+    --bg-light: #f8faf8;
+    --text-main: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-main);
+    height: 100vh;
+    width: 100vw;
+    background: url("../assets/farm.png") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.account-card {
+    background: #f9fdf9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #e0ede0;
+}
+
+.account-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-card span {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.actions button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--primary-green);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.actions button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+.actions .secondary-btn {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 1.5px solid var(--primary-green);
+}
+
+.actions .secondary-btn:hover {
+    background-color: #f0f7f0;
+}
+
+.logout {
+    background-color: var(--danger-red) !important;
+}
+
+.logout:hover {
+    background-color: var(--danger-hover) !important;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2) !important;
+}

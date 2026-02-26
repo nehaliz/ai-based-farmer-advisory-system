@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Management | AI Farmer Advisory</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Account Management</h2>
+
+    <div class="account-card">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>User ID:</strong> <span id="userId"></span></p>
+    </div>
+
+    <div class="actions">
+        <button onclick="clearHistory()">Clear Chat History</button>
+        <button onclick="goToFeedback()">Give Feedback</button>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<script src="account.js"></script>
+</body>
+</html>
